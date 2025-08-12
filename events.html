@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="events.html" class="active">Events</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="funfacts.html">Fun Facts</a></li>
+</ul>
+</nav>
+</header>
+<main class="events-page">
+<h1>Events</h1>
+<div class="event-tabs">
+<button class="tab-button active" data-tab="upcoming">Upcoming</button>
+<button class="tab-button" data-tab="past">Past</button>
+</div>
+<div id="upcoming" class="tab-content active">
+<article class="event-item">
+<div class="event-text">
+<h2>Conference ABC 2025</h2>
+<p>Date: March 15, 2025<br>Location: City, Country<br>Description of the upcoming event.</p>
+</div>
+<img src="images/event1.jpg" alt="Conference ABC" class="event-image">
+</article>
+<hr>
+<article class="event-item">
+<div class="event-text">
+<h2>Conference DEF 2025</h2>
+<p>Date: June 20, 2025<br>Location: Another City, Country<br>Description of another upcoming event.</p>
+</div>
+<img src="images/event3.jpg" alt="Conference DEF" class="event-image">
+</article>
+</div>
+<div id="past" class="tab-content">
+<article class="event-item">
+<div class="event-text">
+<h2>Conference XYZ 2024</h2>
+<p>Date: November 10, 2024<br>Location: City, Country<br>Description of the past event.</p>
+</div>
+<img src="images/event2.jpg" alt="Conference XYZ" class="event-image">
+</article>
+<hr>
+<article class="event-item">
+<div class="event-text">
+<h2>Conference LMN 2023</h2>
+<p>Date: May 5, 2023<br>Location: City, Country<br>Description of another past event.</p>
+</div>
+<img src="images/event4.jpg" alt="Conference LMN" class="event-image">
+</article>
+</div>
+</main>
+<footer>
+<p>&copy; 2025 Grzegorz Dziewisz</p>
+</footer>
+<script>
+const buttons = document.querySelectorAll('.tab-button');
+const contents = document.querySelectorAll('.tab-content');
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
