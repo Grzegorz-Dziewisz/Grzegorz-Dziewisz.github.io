@@ -212,3 +212,18 @@ a:hover { color: #e0c8ff; text-decoration: underline; }
     height: 100px;
   }
 }
+
+
+
+.event-tabs {margin-bottom: 20px;}
+.tab-button {background:#4B0082; color:white; border:none; padding:10px 20px; cursor:pointer;}
+.tab-button.active {background:#6A0DAD;}
+.tab-content {display:none;}
+.tab-content.active {display:block;}
+.event-item {display:flex; align-items:center; margin-bottom:20px; border-bottom:1px solid #ccc; padding-bottom:10px;}
+.event-text {flex:1;}
+.event-image {width:300px; height:auto; margin-left:20px;}
+@media (max-width:768px) {
+  .event-item {flex-direction:column;}
+  .event-image {margin-left:0; margin-top:10px; width:100%;}
+}
