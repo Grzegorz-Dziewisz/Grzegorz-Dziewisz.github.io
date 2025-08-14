@@ -1,27 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dziewisz-Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dziewisz — Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<nav>
-<ul id="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="people.html">People</a></li>
-<li><a href="teaching.html">Teaching</a></li>
-<li><a href="popular.html">Popular</a></li>
-</li>
-</ul>
-</nav>
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="popular.html">Popular</a></li>
+    </ul>
+  </nav>
 </header>
-
 
 <header class="hero">
   <img src="images/background.jpg" alt="Background" class="hero-bg">
@@ -30,36 +29,37 @@
     <div class="intro-text">
       <h1>Hello, I am Grzegorz Dziewisz</h1>
       <p>Welcome to my personal website! I am a student of theoretical physics.
-My scientific interests focus on mathematical physics, geometry and algebras, as well as on relativistic theories and hypotheses.
-</p><p>
-For now, this page is still under development. I will share more about my studies soon.
-</p>
-
+      My scientific interests focus on mathematical physics, geometry and algebras, as well as on relativistic theories and hypotheses.</p>
+      <p>For now, this page is still under development. I will share more about my studies soon.</p>
     </div>
   </div>
 </header>
 
-
-
-<section class="contact-info">
-<h2>Contact Information</h2>
-<p><strong>Email:</strong> <a href="mailto:grzegorz@dziewisz.pl">grzegorz@dziewisz.pl</a></p>
-<p><strong>University Address:</strong> Faculty of Physics and Astronomy, University of Wrocław, Poland</p>
-<div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.5739080553635!2d17.02519767649327!3d51.116321239197696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9e0db76fdfd%3A0x4e45ce7ac38af671!2sWydzia%C5%82%20Fizyki%20i%20Astronomii%20Uniwersytetu%20Wroc%C5%82awskiego!5e0!3m2!1spl!2spl!4v1755005891724!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</section>
+<main class="container">
+  <section class="contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong> <a href="mailto:grzegorz@dziewisz.pl">grzegorz@dziewisz.pl</a></p>
+    <p><strong>University Address:</strong> Faculty of Physics and Astronomy, University of Wrocław, Poland</p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.5739080553635!2d17.02519767649327!3d51.116321239197696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9e0db76fdfd%3A0x4e45ce7ac38af671!2sWydzia%C5%82%20Fizyki%20i%20Astronomii%20Uniwersytetu%20Wroc%C5%82awskiego!5e0!3m2!1spl!2spl!4v1755005891724!5m2!1spl!2spl"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
 
 <footer>
-<p>&copy; 2025 Grzegorz Dziewisz</p>
+  <p>&copy; 2025 Grzegorz Dziewisz</p>
 </footer>
+
 <script>
-// JavaScript to move overflowing menu items into "More"
+// Guard against missing ".more" menu (your current HTML has none)
 const menu = document.getElementById('menu');
-const more = menu.querySelector('.more');
-const dropdown = more.querySelector('.dropdown');
+const more = menu ? menu.querySelector('.more') : null;
+const dropdown = more ? more.querySelector('.dropdown') : null;
 
 function adjustMenu() {
+  if (!menu || !more || !dropdown) return;
   while (menu.scrollWidth > menu.clientWidth && menu.children.length > 1) {
     dropdown.prepend(menu.children[menu.children.length - 2]);
   }
