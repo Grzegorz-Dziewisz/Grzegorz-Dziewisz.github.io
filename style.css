@@ -33,7 +33,7 @@ nav ul {flex-direction:column;}
 .tab-content.active {display:block;}
 .event-item {display:flex; align-items:center; margin-bottom:20px; border-bottom:1px solid #ccc; padding-bottom:10px;}
 .event-text {flex:1;}
-.event-image {width:200px; height:auto; margin-left:20px;}
+.event-image {width:300px; height:auto; margin-left:20px;}
 @media (max-width:768px) {
   .event-item {flex-direction:column;}
   .event-image {margin-left:0; margin-top:10px; width:100%;}
@@ -56,6 +56,13 @@ hr {border:none; border-top:1px solid #ccc; margin:20px 0;}
 }
 .person-image {
   width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+.popular-image {
+  width: 500px;
   height: auto;
   border-radius: 6px;
   margin-right: 12px;
@@ -137,5 +144,7 @@ a:hover {
   color: #e0c8ff; /* jeszcze jaśniejszy przy najechaniu */
   text-decoration: underline;
 }
+
+
 
 
