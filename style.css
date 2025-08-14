@@ -227,3 +227,7 @@ a:hover { color: #e0c8ff; text-decoration: underline; }
   .event-item {flex-direction:column;}
   .event-image {margin-left:0; margin-top:10px; width:100%;}
 }
+
+footer {
+  text-align: center;
+}
